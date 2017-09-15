@@ -308,25 +308,29 @@ void getTFvectors(const tf::tfMessage::ConstPtr& msg) {
 void initializeArms() {
     // initialize all the joints to be controlled to zero
     naoJointNames.push_back("LShoulderRoll") ;
-    naoJointAngles.push_back(0.0) ;
+    naoJointAngles.push_back(0.1221730476) ;
     naoJointNames.push_back("LShoulderPitch") ;
-    naoJointAngles.push_back(0.0) ;
+    naoJointAngles.push_back(0.9721483934) ;
     naoJointNames.push_back("LElbowYaw") ;
-    naoJointAngles.push_back(-0.5) ;
+    naoJointAngles.push_back(-1.066396173) ;
     naoJointNames.push_back("LElbowRoll") ;
-    naoJointAngles.push_back(-0.5) ;
+    naoJointAngles.push_back(-1.2409290982) ;
+    naoJointNames.push_back("LWristYaw") ;
+    naoJointAngles.push_back(-0.5689773362) ;
     naoJointNames.push_back("RShoulderRoll") ;
-    naoJointAngles.push_back(0.0) ;
+    naoJointAngles.push_back(-0.1134464014) ;
     naoJointNames.push_back("RShoulderPitch") ;
-    naoJointAngles.push_back(0.0) ;
+    naoJointAngles.push_back(0.9826203689) ;
     naoJointNames.push_back("RElbowYaw") ;
-    naoJointAngles.push_back(0.5) ;
+    naoJointAngles.push_back(1.0646508437) ;
     naoJointNames.push_back("RElbowRoll") ;
-    naoJointAngles.push_back(0.5) ;
+    naoJointAngles.push_back(1.2479104152) ;
+    naoJointNames.push_back("RWristYaw") ;
+    naoJointAngles.push_back(0.5724679947) ;
     naoJointNames.push_back("RHand") ;
-    naoJointAngles.push_back(0.0) ;
+    naoJointAngles.push_back(0.0160570291) ;
     naoJointNames.push_back("LHand") ;
-    naoJointAngles.push_back(1.0) ;
+    naoJointAngles.push_back(0.0167551608) ;
 }
 int main( int argc , char **argv) {
 
@@ -359,7 +363,7 @@ int main( int argc , char **argv) {
         // Put elements into message for publishing topic
         msg.joint_names = naoJointNames;
         msg.joint_angles = naoJointAngles;  // float [] -In Radians (must be array)
-        speed = 0.5;
+        speed = 0.1;
         rel = 0;
 
         msg.speed = speed; // float 
